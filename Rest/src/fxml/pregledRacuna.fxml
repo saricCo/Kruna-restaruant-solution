@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="773.0" prefWidth="859.0" style="-fx-background-color: white;" stylesheets="@../css/Viper.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logika.PregledRacunaController">
+   <center>
+      <AnchorPane prefHeight="698.0" prefWidth="859.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="mainStack" alignment="TOP_LEFT" layoutX="36.0" layoutY="17.0" prefHeight="654.0" prefWidth="666.0">
+               <children>
+                  <VBox fx:id="prihodiPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: gray;">
+                     <children>
+                        <ScrollPane prefHeight="620.0" prefWidth="666.0">
+                           <content>
+                              <VBox fx:id="prihodiVBox" prefHeight="584.0" prefWidth="614.0" />
+                           </content>
+                        </ScrollPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Broj računa" />
+                              <Label layoutX="10.0" layoutY="10.0" text="Ukupna vrednost " />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="rashodiPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ScrollPane prefHeight="620.0" prefWidth="666.0">
+                           <content>
+                              <VBox fx:id="rashodiVBox" prefHeight="584.0" prefWidth="614.0" />
+                           </content>
+                        </ScrollPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Broj računa" />
+                              <Label layoutX="10.0" layoutY="10.0" text="Ukupna vrednost " />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="stornoPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ScrollPane prefHeight="620.0" prefWidth="666.0">
+                           <content>
+                              <VBox fx:id="stornoVBox" prefHeight="584.0" prefWidth="614.0" />
+                           </content>
+                        </ScrollPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Broj računa" />
+                              <Label layoutX="10.0" layoutY="10.0" text="Ukupna vrednost " />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="magacinPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ScrollPane prefHeight="620.0" prefWidth="666.0">
+                           <content>
+                              <VBox fx:id="dodatoStanjeVBox" prefHeight="584.0" prefWidth="614.0" />
+                           </content>
+                        </ScrollPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Broj računa" />
+                              <Label layoutX="10.0" layoutY="10.0" text="Ukupna vrednost " />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="svePane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;">
+                     <children>
+                        <ScrollPane prefHeight="620.0" prefWidth="666.0">
+                           <content>
+                              <VBox fx:id="mainPane" prefHeight="584.0" prefWidth="614.0" />
+                           </content>
+                        </ScrollPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Broj računa" />
+                              <Label layoutX="10.0" layoutY="10.0" text="Ukupna prihod šank" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+            <Button layoutX="752.0" layoutY="602.0" mnemonicParsing="false" onMouseClicked="#zatvori" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Izadji" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox prefHeight="99.0" prefWidth="859.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="konobariHBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="819.0" spacing="15.0">
+               <children>
+                  <Button fx:id="sviKonobari" mnemonicParsing="false" prefHeight="39.0" prefWidth="67.0" text="Svi" />
+               </children>
+            </HBox>
+            <HBox fx:id="navbar" alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="819.0" spacing="15.0">
+               <children>
+
+
+                  <Button fx:id="sveBtn" mnemonicParsing="false" onAction="#promeniMain" text="Sve" />
+                  <Button fx:id="prihodiBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#promeniMain" text="Prihodi" />
+                  <Button fx:id="rashodiBtn" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#promeniMain" text="Rashodi" />
+                  <Button fx:id="stornoBtn" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#promeniMain" text="Storno" />
+                  <Button fx:id="magacinBtn" layoutX="166.0" layoutY="10.0" mnemonicParsing="false" onAction="#promeniMain" text="Dodato" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,14 @@
+
+.button{
+    -fx-font-size: 45;
+}
+.button:hover{
+    -fx-background-color:#d6d6d6;
+}
+#birajPonovo{
+    -fx-font-size: 22;
+}
+#birajPonovo:hover{
+    -fx-background-color: #e01010 !important;
+}
+

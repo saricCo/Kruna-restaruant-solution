@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="530.0" style="-fx-background-color: white;" stylesheets="@../css/Viper.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logika.OpcijeController">
+   <center>
+      <HBox prefHeight="414.0" prefWidth="441.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="slikaProizvoda" fitHeight="204.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/slikeProizvoda/gazirana_voda_vrnjci1L.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="143.0" prefWidth="186.0">
+                     <children>
+                        <Label fx:id="nazivLbl" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="202.0" text="Kisela Voda" />
+                        <Label fx:id="cenaLbl" prefHeight="27.0" prefWidth="296.0" text="Cena: 100.00" />
+                        <Label fx:id="kolicinaLbl" prefHeight="27.0" prefWidth="278.0" text="Količina: 9" />
+                        <Label fx:id="ukupnoLbl" prefHeight="27.0" prefWidth="222.0" text="Ukupno: 900" wrapText="true" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="350.0" prefWidth="293.0">
+               <children>
+                  <VBox prefHeight="205.0" prefWidth="284.0" spacing="15.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="313.0" text="Izaberite količinu" />
+                        <AnchorPane prefHeight="289.0" prefWidth="284.0">
+                           <children>
+                              <GridPane fx:id="grid" hgap="5.0" prefHeight="164.0" prefWidth="284.0" vgap="15.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="broj1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" text="1" />
+                                    <Button fx:id="broj2" layoutX="25.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="2" GridPane.columnIndex="1" />
+                                    <Button fx:id="broj3" layoutX="90.0" layoutY="8.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="3" GridPane.columnIndex="2" />
+                                    <Button fx:id="broj4" layoutX="156.0" layoutY="8.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="4" GridPane.rowIndex="1" />
+                                    <Button fx:id="broj5" layoutX="25.0" layoutY="42.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button fx:id="broj6" layoutX="90.0" layoutY="42.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Button fx:id="broj7" layoutX="156.0" layoutY="42.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="7" GridPane.rowIndex="2" />
+                                    <Button fx:id="broj8" layoutX="25.0" layoutY="76.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button fx:id="broj9" layoutX="90.0" layoutY="76.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Button fx:id="broj0" layoutX="156.0" layoutY="76.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmeniBroj" prefHeight="39.0" prefWidth="49.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button layoutX="90.0" layoutY="111.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obrisiBroj" prefHeight="39.0" prefWidth="49.0" styleClass="nazadDugme" text="Obrisi" GridPane.rowIndex="3" />
+                                    <Button layoutX="25.0" layoutY="111.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#potvrdiBroj" prefHeight="39.0" prefWidth="49.0" styleClass="potvrdaDugme" text="Potvrdi" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="131.0" text="Porcija/Grami" />
+                        <Label fx:id="trenutnaKolicina" layoutX="10.0" layoutY="32.0" prefHeight="27.0" prefWidth="131.0" text="Količina: 10" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#zatvori" prefHeight="56.0" prefWidth="94.0" styleClass="nazadDugme" text="Nazad" />
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#zavrsi" prefHeight="56.0" prefWidth="86.0" styleClass="potvrdaDugme" text="Završi" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+</BorderPane>
